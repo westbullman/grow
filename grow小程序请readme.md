@@ -247,8 +247,8 @@ POST http://v12grow.qitong.xin/get_task?project_id=25&openid=A1231D34
 
 | **参数说明** | **类型** | **参数路径** |             **描述**             |
 | :----------: | :------: | :----------: | :------------------------------: |
-|   errcode    |  String  |              |             返回编码             |
-|    errmsg    |  string  |              |             返回信息             |
+|     code     |  String  |              |             返回编码             |
+|   message    |  string  |              |             返回信息             |
 |  task_name   |  string  |              |             任务名称             |
 |   task_id    |  Number  |              |              任务id              |
 |    state     |  string  |              | 是否已经完成，完成是1，未完成是0 |
@@ -261,8 +261,8 @@ JSON示例:
 ```
 application/json;charset=UTF-8
 {
-‘errcode':1001,
-'errmsg':"获取信息成功!",
+‘code':1001,
+'message':"获取信息成功!",
 'data':
     [
         {
@@ -284,9 +284,81 @@ JSON示例:
 
 ```
 {
-	"errcode" : "1002",
-	"errmsg" : "获取失败!"
+	"code" : "1002",
+	"message" : "获取失败!"
 	"data"：[]
+} 
+```
+
+
+
+# 五：填写工时单
+
+## 1.接口说明
+
+### 1.1接口描述
+
+  填写工时单
+
+## 2.接口调用说明
+
+### 2.1请求说明
+
+| url           | http://v12grow.qitong.xin/fill_timesheet |
+| ------------- | ---------------------------------------- |
+| 格式          | JSON                                     |
+| https请求方式 | POST                                     |
+| 编码类型      | UTF-8                                    |
+
+### 2.2url参数说明
+
+
+
+|  **参数**  | **是否必填** | **类型** |      **描述**      |
+| :--------: | :----------: | :------: | :----------------: |
+| project_id |      是      |  Numebr  |      项目的id      |
+|   openid   |      是      |  Number  |    微信的openid    |
+| fill_time  |      是      |  String  | 战斗时长，类似8:30 |
+|    memo    |      是      |   Text   |        总结        |
+|   title    |      是      |  string  |        标题        |
+
+
+
+### 3.3请求示例
+
+```
+POST http://v12grow.qitong.xin/fill_timesheet?project_id=25&openid=A1231D34&fill_time=8:30&memo="我是总结"&title="标题,,,,"
+```
+
+
+
+### 3.4返回参数说明
+
+| **参数说明** | **类型** | **参数路径** | **描述** |
+| :----------: | :------: | :----------: | :------: |
+|     code     |  String  |              | 返回编码 |
+|   message    |  string  |              | 返回信息 |
+
+### 3.5正确返回示例
+
+JSON示例: 
+
+```
+application/json;charset=UTF-8
+{
+‘code':1001,
+'message':"插入信息成功!",
+}
+```
+
+### 3.6错误返回示例
+
+JSON示例: 
+
+```
+{
+	"code" : "1002",
+	"message" : "插入信息失败!"
 } 
 ```
 
