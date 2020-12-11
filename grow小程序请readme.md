@@ -493,7 +493,11 @@ application/json;charset=UTF-8
 {
 ‘code':1001,
 'message':"获取信息成功!",
-‘employees’:[{'id':15,'name':李逵},{'id':16,'name':刘备},{'id':17,'name':刘美}]
+‘employees’:[
+            {'id':15,'name':李逵,'image':sadadaadadad},
+            {'id':16,'name':刘备,'image':sadadaadadad},
+            {'id':17,'name':刘美,'image':sadadaadadad}
+            ]
 }
 ```
 
@@ -582,6 +586,74 @@ JSON示例:
 {
 	"code" : "1002",
 	"message" : "创建计划失败!"
+} 
+```
+
+
+
+# 九：返回未完成计划接口
+
+## 1.接口说明
+
+### 1.1接口描述
+
+未完成接口
+
+## 2.接口调用说明
+
+### 2.1请求说明
+
+| url           | http://v12grow.qitong.xin/get_not_done_grow_plan_list |
+| ------------- | ----------------------------------------------------- |
+| 格式          | JSON                                                  |
+| https请求方式 | POST                                                  |
+| 编码类型      | UTF-8                                                 |
+
+### 2.2url参数说明
+
+
+
+| **参数** | **是否必填** | **类型** |   **描述**   |
+| :------: | :----------: | :------: | :----------: |
+|  openid  |      是      |  Number  | 微信的openid |
+
+
+
+### 3.3请求示例
+
+```
+POST http://v12grow.qitong.xin/get_not_done_grow_plan_list?openid=A1231D34
+```
+
+
+
+### 3.4返回参数说明
+
+| **参数说明** | **类型** | **参数路径** | **描述** |
+| :----------: | :------: | :----------: | :------: |
+|     code     |  String  |              | 返回编码 |
+|   message    |  string  |              | 返回信息 |
+
+### 3.5正确返回示例
+
+JSON示例: 
+
+```
+application/json;charset=UTF-8
+{
+‘code':1001,
+'message':"查询信息成功!"
+}
+```
+
+### 3.6错误返回示例
+
+JSON示例: 
+
+```
+{
+	"code" : "1002",
+	"message" : "查询信息失败!"
 } 
 ```
 
