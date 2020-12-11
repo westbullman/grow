@@ -253,6 +253,7 @@ POST http://v12grow.qitong.xin/get_task?project_id=25&openid=A1231D34
 |   task_id    |  Number  |              |              任务id              |
 |    state     |  string  |              | 是否已经完成，完成是1，未完成是0 |
 |   end_date   |   Date   |              |           项目完成日期           |
+|  followers   |   List   |              |            抄送人列表            |
 
 ### 3.5正确返回示例
 
@@ -269,7 +270,8 @@ application/json;charset=UTF-8
         'task_name':'任务的名称',
         'task_id':13,
         'state':1,
-        'end_date':'2020-12-01'
+        'end_date':'2020-12-01',
+        'followers':['张三','李四','王五']
         },
         {
         .......
