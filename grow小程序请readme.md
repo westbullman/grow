@@ -509,3 +509,79 @@ JSON示例:
 } 
 ```
 
+
+
+# 八：创建grow计划接口
+
+## 1.接口说明
+
+### 1.1接口描述
+
+ 创建grow计划
+
+## 2.接口调用说明
+
+### 2.1请求说明
+
+| url           | http://v12grow.qitong.xin/create_grow_plan |
+| ------------- | ------------------------------------------ |
+| 格式          | JSON                                       |
+| https请求方式 | POST                                       |
+| 编码类型      | UTF-8                                      |
+
+### 2.2url参数说明
+
+
+
+|    **参数**     | **是否必填** | **类型** |    **描述**    |
+| :-------------: | :----------: | :------: | :------------: |
+|     openid      |      是      |  Number  |  微信的openid  |
+|    plan_name    |      是      |  String  |    计划名称    |
+|   project_id    |      是      |  Number  |    项目的id    |
+| plan_begin_date |      是      |   Date   |  计划开始时间  |
+|  plan_end_date  |      是      |   Date   |  计划结束时间  |
+|       cc        |      是      |   List   |     抄送人     |
+|     content     |      是      |   TXT    |    计划内容    |
+|     m_plan      |      否      |  Number  | 是否是多人计划 |
+|    executor     |      否      |  Number  |     执行人     |
+
+
+
+### 3.3请求示例
+
+```
+POST http://v12grow.qitong.xin/create_grow_plan?openid=A1231D34&plan_name=.......
+```
+
+
+
+### 3.4返回参数说明
+
+| **参数说明** | **类型** | **参数路径** | **描述** |
+| :----------: | :------: | :----------: | :------: |
+|     code     |  String  |              | 返回编码 |
+|   message    |  string  |              | 返回信息 |
+
+### 3.5正确返回示例
+
+JSON示例: 
+
+```
+application/json;charset=UTF-8
+{
+‘code':1001,
+'message':"创建计划成功!"
+}
+```
+
+### 3.6错误返回示例
+
+JSON示例: 
+
+```
+{
+	"code" : "1002",
+	"message" : "创建计划失败!"
+} 
+```
+
