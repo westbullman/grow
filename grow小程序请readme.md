@@ -172,6 +172,7 @@ POST http://v12grow.qitong.xin/get_project?project_name='金山'&openid=A1231D34
 | difference_day |  Number  |              |            相差的天数            |
 |     status     |  Number  |              | 是否已经完成，完成是1，未完成是0 |
 |    percent     |  string  |              |              百分比              |
+|  create_date   |   Date   |              |             创建时间             |
 
 ### 3.5正确返回示例
 
@@ -184,6 +185,7 @@ application/json;charset=UTF-8
 "project_id":2,
 "project_name":"金山太阳能",
 "difference_day":15,
+"create_date":'2015-10-16',
 "status":0,
 "percent":21%
 },
@@ -191,6 +193,7 @@ application/json;charset=UTF-8
 "project_id":21,
 "project_name":"沃农供应链",
 "difference_day":18,
+"create_date":'2015-10-16',
 "status":1,
 "percent":15%
 },
@@ -198,6 +201,7 @@ application/json;charset=UTF-8
 "project_id":32,
 "project_name":"星贝达化工",
 "difference_day":18,
+"create_date":'2015-10-16',
 "status":1,
 "percent":28%
 }
@@ -380,7 +384,7 @@ JSON示例:
 
 | url           | http://v12grow.qitong.xin/get_this_week_timesheet |
 | ------------- | ------------------------------------------------- |
-| 格式          | GET                                               |
+| 格式          | JSON                                              |
 | https请求方式 | POST                                              |
 | 编码类型      | UTF-8                                             |
 
@@ -431,6 +435,77 @@ JSON示例:
 	"code" : "1002",
 	"message" : "获取信息失败!"
 	“total_hour”:'0h'
+} 
+```
+
+
+
+# 七：获取人员列表的接口
+
+## 1.接口说明
+
+### 1.1接口描述
+
+  获取人员列表的接口
+
+## 2.接口调用说明
+
+### 2.1请求说明
+
+| url           | http://v12grow.qitong.xin/get_hr_employee_list |
+| ------------- | ---------------------------------------------- |
+| 格式          | JSON                                           |
+| https请求方式 | POST                                           |
+| 编码类型      | UTF-8                                          |
+
+### 2.2url参数说明
+
+
+
+| **参数** | **是否必填** | **类型** |   **描述**   |
+| :------: | :----------: | :------: | :----------: |
+|  openid  |      是      |  Number  | 微信的openid |
+
+
+
+### 3.3请求示例
+
+```
+POST http://v12grow.qitong.xin/get_hr_employee_list?openid=A1231D34
+```
+
+
+
+### 3.4返回参数说明
+
+| **参数说明** | **类型** | **参数路径** | **描述** |
+| :----------: | :------: | :----------: | :------: |
+|     code     |  String  |              | 返回编码 |
+|   message    |  string  |              | 返回信息 |
+|  employees   |   List   |              | 员工列表 |
+
+### 3.5正确返回示例
+
+JSON示例: 
+
+```
+application/json;charset=UTF-8
+{
+‘code':1001,
+'message':"获取信息成功!",
+‘employees’:[{'id':15,'name':李逵},{'id':16,'name':刘备},{'id':17,'name':刘美}]
+}
+```
+
+### 3.6错误返回示例
+
+JSON示例: 
+
+```
+{
+	"code" : "1002",
+	"message" : "获取信息失败!"
+	“employees”:'0h'
 } 
 ```
 
