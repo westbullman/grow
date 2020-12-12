@@ -771,6 +771,77 @@ POST http://v12grow.qitong.xin/get_timesheet_list?openid=A1231D34&project_id=3&s
 
 ### 3.4返回参数说明
 
+| **参数说明** | **类型** | **参数路径** |  **描述**  |
+| :----------: | :------: | :----------: | :--------: |
+|     code     |  String  |              |  返回编码  |
+|   message    |  string  |              |  返回信息  |
+|     data     |   List   |              | 工时表信息 |
+
+### 3.5正确返回示例
+
+JSON示例: 
+
+```
+application/json;charset=UTF-8
+{
+‘code':1001,
+'message':"获取信息成功!"，
+‘data’:[.....]
+}
+```
+
+### 3.6错误返回示例
+
+JSON示例: 
+
+```
+{
+	"code" : "1002",
+	"message" : "获取信息失败!"
+} 
+```
+
+
+
+# 十二：发布日报接口
+
+## 1.接口说明
+
+### 1.1接口描述
+
+发布日报接口
+
+## 2.接口调用说明
+
+### 2.1请求说明
+
+| url           | http://v12grow.qitong.xin/publish_daily |
+| ------------- | --------------------------------------- |
+| 格式          | JSON                                    |
+| https请求方式 | POST                                    |
+| 编码类型      | UTF-8                                   |
+
+### 2.2url参数说明
+
+
+
+|   **参数**    | **是否必填** | **类型** |   **描述**   |
+| :-----------: | :----------: | :------: | :----------: |
+|    openid     |      是      |  Number  | 微信的openid |
+| time_sheet_id |      否      |  Number  |  工时表的id  |
+
+
+
+### 3.3请求示例
+
+```
+POST http://v12grow.qitong.xin/publish_daily?openid=A1231D34&time_sheet_id=3
+```
+
+
+
+### 3.4返回参数说明
+
 | **参数说明** | **类型** | **参数路径** | **描述** |
 | :----------: | :------: | :----------: | :------: |
 |     code     |  String  |              | 返回编码 |
@@ -784,7 +855,7 @@ JSON示例:
 application/json;charset=UTF-8
 {
 ‘code':1001,
-'message':"获取信息成功!"
+'message':"发布日报成功!"
 }
 ```
 
@@ -795,7 +866,7 @@ JSON示例:
 ```
 {
 	"code" : "1002",
-	"message" : "获取信息失败!"
+	"message" : "发布日报失败!"
 } 
 ```
 
