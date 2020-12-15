@@ -1263,3 +1263,84 @@ JSON示例:
 } 
 ```
 
+
+
+# 十八：获取计划详情接口
+
+## 1.接口说明
+
+### 1.1接口描述
+
+获取计划详情的接口
+
+## 2.接口调用说明
+
+### 2.1请求说明
+
+| url           | http://v12grow.qitong.xin/get_grow_plan_detail |
+| ------------- | ---------------------------------------------- |
+| 格式          | JSON                                           |
+| https请求方式 | POST                                           |
+| 编码类型      | UTF-8                                          |
+
+### 2.2url参数说明
+
+
+
+| **参数** | **是否必填** | **类型** |   **描述**   |
+| :------: | :----------: | :------: | :----------: |
+|  openid  |      是      |  Number  | 微信的openid |
+| plan_id  |      是      |  Number  |   计划的id   |
+
+
+
+### 3.3请求示例
+
+```
+POST http://v12grow.qitong.xin/get_grow_plan_detail?openid=A1231D34&plan_id=26
+```
+
+
+
+### 3.4返回参数说明
+
+| **参数说明** | **类型** | **参数路径** | **描述** |
+| :----------: | :------: | :----------: | :------: |
+|     code     |  String  |              | 返回编码 |
+|   message    |  string  |              | 返回信息 |
+|     data     |   List   |              | 数据列表 |
+
+### 3.5正确返回示例
+
+JSON示例: 
+
+```
+application/json;charset=UTF-8
+{
+‘code':1001,
+'message':"查询信息成功!",
+‘data’:{
+		‘project_name’:'我是尼玛偶像',
+		‘project_id’:'项目的id',
+		‘title’:'dasda',
+		'plan_begin_date':2020-10-11,
+		'plan_end_date':2020-10-11,
+		'cc':['乔峰','段誉','张海'],
+		'content':'adasdasdasd',
+		'm_plan':True,
+		'executor':['乔峰','段誉','张海']
+	}
+}
+```
+
+### 3.6错误返回示例
+
+JSON示例: 
+
+```
+{
+	"code" : "1002",
+	"message" : "查询信息失败!"
+} 
+```
+
