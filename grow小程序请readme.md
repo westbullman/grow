@@ -1176,3 +1176,90 @@ JSON示例:
 } 
 ```
 
+
+
+# 十七：获取自己工时 
+
+## 1.接口说明
+
+### 1.1接口描述
+
+获取自己工时，如果日期没传就默认是今天。
+
+## 2.接口调用说明
+
+### 2.1请求说明
+
+| url           | http://v12grow.qitong.xin/get_my_day_timesheet |
+| ------------- | ---------------------------------------------- |
+| 格式          | JSON                                           |
+| https请求方式 | POST                                           |
+| 编码类型      | UTF-8                                          |
+
+### 2.2url参数说明
+
+
+
+|  **参数**   | **是否必填** | **类型** |   **描述**   |
+| :---------: | :----------: | :------: | :----------: |
+|   openid    |      是      |  Number  | 微信的openid |
+| search_date |      否      |   Date   |   查询日期   |
+
+
+
+### 3.3请求示例
+
+```
+POST http://v12grow.qitong.xin/get_my_day_timesheet?openid=A1231D34&search_date=’2015-10-12‘
+```
+
+
+
+### 3.4返回参数说明
+
+| **参数说明** | **类型** | **参数路径** | **描述** |
+| :----------: | :------: | :----------: | :------: |
+|     code     |  String  |              | 返回编码 |
+|   message    |  string  |              | 返回信息 |
+|     data     |   List   |              | 数据列表 |
+
+### 3.5正确返回示例
+
+JSON示例: 
+
+```
+application/json;charset=UTF-8
+{
+‘code':1001,
+'message':"获取信息成功!",
+‘data’:[
+		{'fill_time':12,
+		'memo':'w撒大大',
+		'title':'这个是标题',
+		'project_id':2,
+		'project_name':'金山太阳能你',
+		'employee_name':'张三丰',
+		'employee_image':'d12easd1-213asd1231'},
+		
+		{'fill_time':11,
+		'memo':'sdasda',
+		'title':'adasd',
+		'project_id':2,
+		'project_name':'asd',
+		'employee_name':'asd',
+		'employee_image':'asdasdaadad31'},
+	   ],
+}
+```
+
+### 3.6错误返回示例
+
+JSON示例: 
+
+```
+{
+	"code" : "1002",
+	"message" : "获取信息失败!"
+} 
+```
+
