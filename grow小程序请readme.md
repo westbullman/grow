@@ -1396,6 +1396,8 @@ POST http://v12grow.qitong.xin/begin_comment?date='2020-12-13'&employee_id=26&pr
 |  project_id  |  Number  |              | 项目的id |
 | employee_id  |  Number  |              | 员工的id |
 |     data     |   List   |              | 数据列表 |
+|   comment    |  String  |              | 评论内容 |
+|    total     |  Number  |              |   星级   |
 
 ### 3.5正确返回示例
 
