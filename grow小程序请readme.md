@@ -413,6 +413,7 @@ POST http://v12grow.qitong.xin/get_this_week_timesheet?openid=A1231D34
 |     code     |  String  |              |               返回编码               |
 |   message    |  string  |              |               返回信息               |
 |  total_hour  |  String  |              |                总工时                |
+|    total     |  Number  |              |               元宝总数               |
 |     days     |   List   |              | ['07','08','09','10','11','12','13'] |
 
 ### 3.5正确返回示例
