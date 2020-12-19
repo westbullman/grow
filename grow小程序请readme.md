@@ -1551,6 +1551,7 @@ POST http://v12grow.qitong.xin/get_new_three_task?openid=123123A123
 |     code     |  String  |              | 返回编码 |
 |   message    |  string  |              | 返回信息 |
 |     data     |   List   |              | 任务数据 |
+|    phone     |  String  |              | 电话号码 |
 
 ### 3.5正确返回示例
 
