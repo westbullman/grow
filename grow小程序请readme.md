@@ -236,6 +236,7 @@ application/json;charset=UTF-8
 | :--------: | :----------: | :------: | :----------: |
 | project_id |      是      |  Numebr  |   项目的id   |
 |   openid   |      是      |  string  | 微信的openid |
+|  task_id   |      否      |  Number  |   任务的id   |
 
 
 
