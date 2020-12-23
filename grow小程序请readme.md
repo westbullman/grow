@@ -324,6 +324,7 @@ JSON示例:
 |  **参数**  | **是否必填** | **类型** |      **描述**      |
 | :--------: | :----------: | :------: | :----------------: |
 | project_id |      是      |  Numebr  |      项目的id      |
+|  task_id   |      是      |  Number  |      任务的id      |
 |   openid   |      是      |  Number  |    微信的openid    |
 | fill_time  |      是      |  String  | 战斗时长，类似8:30 |
 |    memo    |      是      |   Text   |        总结        |
