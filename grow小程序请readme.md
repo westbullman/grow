@@ -832,6 +832,7 @@ JSON示例:
 | :-----------: | :----------: | :------: | :----------: |
 |    openid     |      是      |  Number  | 微信的openid |
 | time_sheet_id |      否      |  Number  |  工时表的id  |
+|     memo      |      否      |   Text   |     总结     |
 
 
 
