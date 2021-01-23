@@ -10,11 +10,11 @@
 
 ### 2.1请求说明
 
-| url           | http://v12grow.qitong.xin/openid_bind |
-| ------------- | ------------------------------------- |
-| 格式          | JSON                                  |
-| https请求方式 | POST                                  |
-| 编码类型      | UTF-8                                 |
+| url           | http://do.qitongyun.cn:8069/openid_bind |
+| ------------- | --------------------------------------- |
+| 格式          | JSON                                    |
+| https请求方式 | POST                                    |
+| 编码类型      | UTF-8                                   |
 
 ### 2.2url参数说明
 
@@ -30,7 +30,7 @@
 ### 3.3请求示例
 
 ```
-POST http://v12grow.qitong.xin/openid_bind?mobile=18516393654&openid=A1231D34
+POST http://do.qitongyun.cn:8069/openid_bind?mobile=18516393654&openid=A1231D34
 ```
 
 
@@ -85,11 +85,11 @@ application/json;charset=UTF-8
 
 ### 2.1请求说明
 
-| url           | http://v12grow.qitong.xin/get_openid |
-| ------------- | ------------------------------------ |
-| 格式          | JSON                                 |
-| https请求方式 | POST                                 |
-| 编码类型      | UTF-8                                |
+| url           | http://do.qitongyun.cn:8069/get_openid |
+| ------------- | -------------------------------------- |
+| 格式          | JSON                                   |
+| https请求方式 | POST                                   |
+| 编码类型      | UTF-8                                  |
 
 ### 2.2url参数说明
 
@@ -102,7 +102,7 @@ application/json;charset=UTF-8
 ### 3.3请求示例
 
 ```
-POST http://v12grow.qitong.xin/get_openid?js_code=A1231D34
+POST http://do.qitongyun.cn:8069/get_openid?js_code=A1231D34
 ```
 
 
@@ -138,11 +138,11 @@ application/json;charset=UTF-8
 
 ### 2.1请求说明
 
-| url           | http://v12grow.qitong.xin/get_project |
-| ------------- | ------------------------------------- |
-| 格式          | JSON                                  |
-| https请求方式 | POST                                  |
-| 编码类型      | UTF-8                                 |
+| url           | http://do.qitongyun.cn:8069/get_project |
+| ------------- | --------------------------------------- |
+| 格式          | JSON                                    |
+| https请求方式 | POST                                    |
+| 编码类型      | UTF-8                                   |
 
 ### 2.2url参数说明
 
@@ -158,7 +158,7 @@ application/json;charset=UTF-8
 ### 3.3请求示例
 
 ```
-POST http://v12grow.qitong.xin/get_project?project_name='金山'&openid=A1231D34
+POST http://do.qitongyun.cn:8069/get_project?project_name='金山'&openid=A1231D34
 ```
 
 
@@ -222,11 +222,11 @@ application/json;charset=UTF-8
 
 ### 2.1请求说明
 
-| url           | http://v12grow.qitong.xin/get_task |
-| ------------- | ---------------------------------- |
-| 格式          | JSON                               |
-| https请求方式 | POST                               |
-| 编码类型      | UTF-8                              |
+| url           | http://do.qitongyun.cn:8069/get_task |
+| ------------- | ------------------------------------ |
+| 格式          | JSON                                 |
+| https请求方式 | POST                                 |
+| 编码类型      | UTF-8                                |
 
 ### 2.2url参数说明
 
@@ -243,7 +243,7 @@ application/json;charset=UTF-8
 ### 3.3请求示例
 
 ```
-POST http://v12grow.qitong.xin/get_task?project_id=25&openid=A1231D34
+POST http://do.qitongyun.cn:8069/get_task?project_id=25&openid=A1231D34
 ```
 
 
@@ -311,11 +311,11 @@ JSON示例:
 
 ### 2.1请求说明
 
-| url           | http://v12grow.qitong.xin/fill_timesheet |
-| ------------- | ---------------------------------------- |
-| 格式          | JSON                                     |
-| https请求方式 | POST                                     |
-| 编码类型      | UTF-8                                    |
+| url           | http://do.qitongyun.cn:8069/fill_timesheet |
+| ------------- | ------------------------------------------ |
+| 格式          | JSON                                       |
+| https请求方式 | POST                                       |
+| 编码类型      | UTF-8                                      |
 
 ### 2.2url参数说明
 
@@ -335,7 +335,7 @@ JSON示例:
 ### 3.3请求示例
 
 ```
-POST http://v12grow.qitong.xin/fill_timesheet?project_id=25&openid=A1231D34&fill_time=8:30&memo="我是总结"&title="标题,,,,"
+POST http://do.qitongyun.cn:8069/fill_timesheet?project_id=25&openid=A1231D34&fill_time=8:30&memo="我是总结"&title="标题,,,,"
 ```
 
 
@@ -384,11 +384,11 @@ JSON示例:
 
 ### 2.1请求说明
 
-| url           | http://v12grow.qitong.xin/get_this_week_timesheet |
-| ------------- | ------------------------------------------------- |
-| 格式          | JSON                                              |
-| https请求方式 | POST                                              |
-| 编码类型      | UTF-8                                             |
+| url           | http://do.qitongyun.cn:8069/get_this_week_timesheet |
+| ------------- | --------------------------------------------------- |
+| 格式          | JSON                                                |
+| https请求方式 | POST                                                |
+| 编码类型      | UTF-8                                               |
 
 ### 2.2url参数说明
 
@@ -403,7 +403,7 @@ JSON示例:
 ### 3.3请求示例
 
 ```
-POST http://v12grow.qitong.xin/get_this_week_timesheet?openid=A1231D34
+POST http://do.qitongyun.cn:8069/get_this_week_timesheet?openid=A1231D34
 ```
 
 
@@ -458,11 +458,11 @@ JSON示例:
 
 ### 2.1请求说明
 
-| url           | http://v12grow.qitong.xin/get_hr_employee_list |
-| ------------- | ---------------------------------------------- |
-| 格式          | JSON                                           |
-| https请求方式 | POST                                           |
-| 编码类型      | UTF-8                                          |
+| url           | http://do.qitongyun.cn:8069/get_hr_employee_list |
+| ------------- | ------------------------------------------------ |
+| 格式          | JSON                                             |
+| https请求方式 | POST                                             |
+| 编码类型      | UTF-8                                            |
 
 ### 2.2url参数说明
 
@@ -477,7 +477,7 @@ JSON示例:
 ### 3.3请求示例
 
 ```
-POST http://v12grow.qitong.xin/get_hr_employee_list?openid=A1231D34
+POST http://do.qitongyun.cn:8069/get_hr_employee_list?openid=A1231D34
 ```
 
 
@@ -533,11 +533,11 @@ JSON示例:
 
 ### 2.1请求说明
 
-| url           | http://v12grow.qitong.xin/create_grow_plan |
-| ------------- | ------------------------------------------ |
-| 格式          | JSON                                       |
-| https请求方式 | POST                                       |
-| 编码类型      | UTF-8                                      |
+| url           | http://do.qitongyun.cn:8069/create_grow_plan |
+| ------------- | -------------------------------------------- |
+| 格式          | JSON                                         |
+| https请求方式 | POST                                         |
+| 编码类型      | UTF-8                                        |
 
 ### 2.2url参数说明
 
@@ -560,7 +560,7 @@ JSON示例:
 ### 3.3请求示例
 
 ```
-POST http://v12grow.qitong.xin/create_grow_plan?openid=A1231D34&plan_name=.......
+POST http://do.qitongyun.cn:8069/create_grow_plan?openid=A1231D34&plan_name=.......
 ```
 
 
@@ -609,11 +609,11 @@ JSON示例:
 
 ### 2.1请求说明
 
-| url           | http://v12grow.qitong.xin/get_not_done_grow_plan_list |
-| ------------- | ----------------------------------------------------- |
-| 格式          | JSON                                                  |
-| https请求方式 | POST                                                  |
-| 编码类型      | UTF-8                                                 |
+| url           | http://do.qitongyun.cn:8069/get_not_done_grow_plan_list |
+| ------------- | ------------------------------------------------------- |
+| 格式          | JSON                                                    |
+| https请求方式 | POST                                                    |
+| 编码类型      | UTF-8                                                   |
 
 ### 2.2url参数说明
 
@@ -628,7 +628,7 @@ JSON示例:
 ### 3.3请求示例
 
 ```
-POST http://v12grow.qitong.xin/get_not_done_grow_plan_list?openid=A1231D34
+POST http://do.qitongyun.cn:8069/get_not_done_grow_plan_list?openid=A1231D34
 ```
 
 
@@ -677,11 +677,11 @@ JSON示例:
 
 ### 2.1请求说明
 
-| url           | http://v12grow.qitong.xin/done_plan |
-| ------------- | ----------------------------------- |
-| 格式          | JSON                                |
-| https请求方式 | POST                                |
-| 编码类型      | UTF-8                               |
+| url           | http://do.qitongyun.cn:8069/done_plan |
+| ------------- | ------------------------------------- |
+| 格式          | JSON                                  |
+| https请求方式 | POST                                  |
+| 编码类型      | UTF-8                                 |
 
 ### 2.2url参数说明
 
@@ -697,7 +697,7 @@ JSON示例:
 ### 3.3请求示例
 
 ```
-POST http://v12grow.qitong.xin/done_plan?openid=A1231D34&plan_id=3
+POST http://do.qitongyun.cn:8069/done_plan?openid=A1231D34&plan_id=3
 ```
 
 
@@ -746,11 +746,11 @@ JSON示例:
 
 ### 2.1请求说明
 
-| url           | http://v12grow.qitong.xin/get_timesheet_list |
-| ------------- | -------------------------------------------- |
-| 格式          | JSON                                         |
-| https请求方式 | POST                                         |
-| 编码类型      | UTF-8                                        |
+| url           | http://do.qitongyun.cn:8069/get_timesheet_list |
+| ------------- | ---------------------------------------------- |
+| 格式          | JSON                                           |
+| https请求方式 | POST                                           |
+| 编码类型      | UTF-8                                          |
 
 ### 2.2url参数说明
 
@@ -767,7 +767,7 @@ JSON示例:
 ### 3.3请求示例
 
 ```
-POST http://v12grow.qitong.xin/get_timesheet_list?openid=A1231D34&project_id=3&search_date=‘2010-10-11’
+POST http://do.qitongyun.cn:8069/get_timesheet_list?openid=A1231D34&project_id=3&search_date=‘2010-10-11’
 ```
 
 
@@ -818,11 +818,11 @@ JSON示例:
 
 ### 2.1请求说明
 
-| url           | http://v12grow.qitong.xin/publish_daily |
-| ------------- | --------------------------------------- |
-| 格式          | JSON                                    |
-| https请求方式 | POST                                    |
-| 编码类型      | UTF-8                                   |
+| url           | http://do.qitongyun.cn:8069/publish_daily |
+| ------------- | ----------------------------------------- |
+| 格式          | JSON                                      |
+| https请求方式 | POST                                      |
+| 编码类型      | UTF-8                                     |
 
 ### 2.2url参数说明
 
@@ -839,7 +839,7 @@ JSON示例:
 ### 3.3请求示例
 
 ```
-POST http://v12grow.qitong.xin/publish_daily?openid=A1231D34&time_sheet_id=3
+POST http://do.qitongyun.cn:8069/publish_daily?openid=A1231D34&time_sheet_id=3
 ```
 
 
@@ -888,11 +888,11 @@ JSON示例:
 
 ### 2.1请求说明
 
-| url           | http://v12grow.qitong.xin/get_daily_list |
-| ------------- | ---------------------------------------- |
-| 格式          | JSON                                     |
-| https请求方式 | POST                                     |
-| 编码类型      | UTF-8                                    |
+| url           | http://do.qitongyun.cn:8069/get_daily_list |
+| ------------- | ------------------------------------------ |
+| 格式          | JSON                                       |
+| https请求方式 | POST                                       |
+| 编码类型      | UTF-8                                      |
 
 ### 2.2url参数说明
 
@@ -908,7 +908,7 @@ JSON示例:
 ### 3.3请求示例
 
 ```
-POST http://v12grow.qitong.xin/get_daily_list?openid=A1231D34&this_date=‘2020-10-12’
+POST http://do.qitongyun.cn:8069/get_daily_list?openid=A1231D34&this_date=‘2020-10-12’
 ```
 
 
@@ -974,11 +974,11 @@ JSON示例:
 
 ### 2.1请求说明
 
-| url           | http://v12grow.qitong.xin/get_unread_total |
-| ------------- | ------------------------------------------ |
-| 格式          | JSON                                       |
-| https请求方式 | POST                                       |
-| 编码类型      | UTF-8                                      |
+| url           | http://do.qitongyun.cn:8069/get_unread_total |
+| ------------- | -------------------------------------------- |
+| 格式          | JSON                                         |
+| https请求方式 | POST                                         |
+| 编码类型      | UTF-8                                        |
 
 ### 2.2url参数说明
 
@@ -993,7 +993,7 @@ JSON示例:
 ### 3.3请求示例
 
 ```
-POST http://v12grow.qitong.xin/get_unread_total?openid=A1231D34 
+POST http://do.qitongyun.cn:8069/get_unread_total?openid=A1231D34 
 ```
 
 
@@ -1048,11 +1048,11 @@ JSON示例:
 
 ### 2.1请求说明
 
-| url           | http://v12grow.qitong.xin/read_ribao_message |
-| ------------- | -------------------------------------------- |
-| 格式          | JSON                                         |
-| https请求方式 | POST                                         |
-| 编码类型      | UTF-8                                        |
+| url           | http://do.qitongyun.cn:8069/read_ribao_message |
+| ------------- | ---------------------------------------------- |
+| 格式          | JSON                                           |
+| https请求方式 | POST                                           |
+| 编码类型      | UTF-8                                          |
 
 ### 2.2url参数说明
 
@@ -1069,7 +1069,7 @@ JSON示例:
 ### 3.3请求示例
 
 ```
-POST http://v12grow.qitong.xin/read_ribao_message?openid=A1231D34&data=[1,2,3,4,5,6]&type='ribao'
+POST http://do.qitongyun.cn:8069/read_ribao_message?openid=A1231D34&data=[1,2,3,4,5,6]&type='ribao'
 ```
 
 
@@ -1122,11 +1122,11 @@ JSON示例:
 
 ### 2.1请求说明
 
-| url           | http://v12grow.qitong.xin/get_system_total |
-| ------------- | ------------------------------------------ |
-| 格式          | JSON                                       |
-| https请求方式 | POST                                       |
-| 编码类型      | UTF-8                                      |
+| url           | http://do.qitongyun.cn:8069/get_system_total |
+| ------------- | -------------------------------------------- |
+| 格式          | JSON                                         |
+| https请求方式 | POST                                         |
+| 编码类型      | UTF-8                                        |
 
 ### 2.2url参数说明
 
@@ -1141,7 +1141,7 @@ JSON示例:
 ### 3.3请求示例
 
 ```
-POST http://v12grow.qitong.xin/read_ribao_message?openid=A1231D34&data=[1,2,3,4,5,6]&type='ribao'
+POST http://do.qitongyun.cn:8069/read_ribao_message?openid=A1231D34&data=[1,2,3,4,5,6]&type='ribao'
 ```
 
 
@@ -1194,11 +1194,11 @@ JSON示例:
 
 ### 2.1请求说明
 
-| url           | http://v12grow.qitong.xin/get_my_day_timesheet |
-| ------------- | ---------------------------------------------- |
-| 格式          | JSON                                           |
-| https请求方式 | POST                                           |
-| 编码类型      | UTF-8                                          |
+| url           | http://do.qitongyun.cn:8069/get_my_day_timesheet |
+| ------------- | ------------------------------------------------ |
+| 格式          | JSON                                             |
+| https请求方式 | POST                                             |
+| 编码类型      | UTF-8                                            |
 
 ### 2.2url参数说明
 
@@ -1214,7 +1214,7 @@ JSON示例:
 ### 3.3请求示例
 
 ```
-POST http://v12grow.qitong.xin/get_my_day_timesheet?openid=A1231D34&search_date=’2015-10-12‘
+POST http://do.qitongyun.cn:8069/get_my_day_timesheet?openid=A1231D34&search_date=’2015-10-12‘
 ```
 
 
@@ -1281,11 +1281,11 @@ JSON示例:
 
 ### 2.1请求说明
 
-| url           | http://v12grow.qitong.xin/get_grow_plan_detail |
-| ------------- | ---------------------------------------------- |
-| 格式          | JSON                                           |
-| https请求方式 | POST                                           |
-| 编码类型      | UTF-8                                          |
+| url           | http://do.qitongyun.cn:8069/get_grow_plan_detail |
+| ------------- | ------------------------------------------------ |
+| 格式          | JSON                                             |
+| https请求方式 | POST                                             |
+| 编码类型      | UTF-8                                            |
 
 ### 2.2url参数说明
 
@@ -1301,7 +1301,7 @@ JSON示例:
 ### 3.3请求示例
 
 ```
-POST http://v12grow.qitong.xin/get_grow_plan_detail?openid=A1231D34&plan_id=26
+POST http://do.qitongyun.cn:8069/get_grow_plan_detail?openid=A1231D34&plan_id=26
 ```
 
 
@@ -1362,11 +1362,11 @@ JSON示例:
 
 ### 2.1请求说明
 
-| url           | http://v12grow.qitong.xin/begin_comment |
-| ------------- | --------------------------------------- |
-| 格式          | JSON                                    |
-| https请求方式 | POST                                    |
-| 编码类型      | UTF-8                                   |
+| url           | http://do.qitongyun.cn:8069/begin_comment |
+| ------------- | ----------------------------------------- |
+| 格式          | JSON                                      |
+| https请求方式 | POST                                      |
+| 编码类型      | UTF-8                                     |
 
 ### 2.2url参数说明
 
@@ -1384,7 +1384,7 @@ JSON示例:
 ### 3.3请求示例
 
 ```
-POST http://v12grow.qitong.xin/begin_comment?date='2020-12-13'&employee_id=26&project_id=2
+POST http://do.qitongyun.cn:8069/begin_comment?date='2020-12-13'&employee_id=26&project_id=2
 ```
 
 
@@ -1450,11 +1450,11 @@ JSON示例:
 
 ### 2.1请求说明
 
-| url           | http://v12grow.qitong.xin/done_comment |
-| ------------- | -------------------------------------- |
-| 格式          | JSON                                   |
-| https请求方式 | POST                                   |
-| 编码类型      | UTF-8                                  |
+| url           | http://do.qitongyun.cn:8069/done_comment |
+| ------------- | ---------------------------------------- |
+| 格式          | JSON                                     |
+| https请求方式 | POST                                     |
+| 编码类型      | UTF-8                                    |
 
 ### 2.2url参数说明
 
@@ -1474,7 +1474,7 @@ JSON示例:
 ### 3.3请求示例
 
 ```
-POST http://v12grow.qitong.xin/done_comment?date='2020-12-13'&employee_id=26&project_id=2&memo="不知道写什么评论"&total=2
+POST http://do.qitongyun.cn:8069/done_comment?date='2020-12-13'&employee_id=26&project_id=2&memo="不知道写什么评论"&total=2
 ```
 
 
@@ -1523,11 +1523,11 @@ JSON示例:
 
 ### 2.1请求说明
 
-| url           | http://v12grow.qitong.xin/get_new_three_task |
-| ------------- | -------------------------------------------- |
-| 格式          | JSON                                         |
-| https请求方式 | POST                                         |
-| 编码类型      | UTF-8                                        |
+| url           | http://do.qitongyun.cn:8069/get_new_three_task |
+| ------------- | ---------------------------------------------- |
+| 格式          | JSON                                           |
+| https请求方式 | POST                                           |
+| 编码类型      | UTF-8                                          |
 
 ### 2.2url参数说明
 
@@ -1542,7 +1542,7 @@ JSON示例:
 ### 3.3请求示例
 
 ```
-POST http://v12grow.qitong.xin/get_new_three_task?openid=123123A123
+POST http://do.qitongyun.cn:8069/get_new_three_task?openid=123123A123
 ```
 
 
@@ -1593,11 +1593,11 @@ JSON示例:
 
 ### 2.1请求说明
 
-| url           | http://v12grow.qitong.xin/delete_comment |
-| ------------- | ---------------------------------------- |
-| 格式          | JSON                                     |
-| https请求方式 | POST                                     |
-| 编码类型      | UTF-8                                    |
+| url           | http://do.qitongyun.cn:8069/delete_comment |
+| ------------- | ------------------------------------------ |
+| 格式          | JSON                                       |
+| https请求方式 | POST                                       |
+| 编码类型      | UTF-8                                      |
 
 ### 2.2url参数说明
 
@@ -1613,7 +1613,7 @@ JSON示例:
 ### 3.3请求示例
 
 ```
-POST http://v12grow.qitong.xin/delete_comment?openid=123123A123&comment_id=2
+POST http://do.qitongyun.cn:8069/delete_comment?openid=123123A123&comment_id=2
 ```
 
 
@@ -1646,5 +1646,77 @@ JSON示例:
 	"code" : "1002",
 	"message" : "删除失败!"
 } 
+```
+
+
+
+# 二十三：check openid有没有绑定手机号码
+
+## 1.接口说明
+
+### 1.1接口描述
+
+check openid有没有绑定手机号码
+
+## 2.接口调用说明
+
+### 2.1请求说明
+
+| url           | http://do.qitongyun.cn:8069/check_openid |
+| ------------- | ---------------------------------------- |
+| 格式          | JSON                                     |
+| https请求方式 | POST                                     |
+| 编码类型      | UTF-8                                    |
+
+### 2.2url参数说明
+
+
+
+| **参数** | **是否必填** | **类型** |   **描述**   |
+| :------: | :----------: | :------: | :----------: |
+|  openid  |      是      |  Number  | 微信的openid |
+
+
+
+### 3.3请求示例
+
+```
+POST http://do.qitongyun.cn:8069/check_openid?openid=123123A123&comment_id=2
+```
+
+
+
+### 3.4返回参数说明
+
+| **参数说明** | **类型** | **参数路径** | **描述** |
+| :----------: | :------: | :----------: | :------: |
+|     code     |  String  |              | 返回编码 |
+| mobile_phone |  String  |              | 手机号码 |
+|   message    |  string  |              | 返回信息 |
+
+### 3.5正确返回示例
+
+JSON示例: 
+
+```
+application/json;charset=UTF-8
+{
+    ‘code':1001,
+    ‘mobile_phone’：18516393654
+    'message':"该用户已经绑定手机!",
+}
+```
+
+### 3.6错误返回示例
+
+JSON示例: 
+
+```
+application/json;charset=UTF-8
+{
+    ‘code':1003,
+    ‘mobile_phone’：‘’
+    'message':"该用户还未绑定!",
+}
 ```
 
