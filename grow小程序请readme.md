@@ -20,17 +20,18 @@
 
 
 
-| **参数** | **是否必填** | **类型** |   **描述**   |
-| :------: | :----------: | :------: | :----------: |
-|  mobile  |      是      |  string  |   手机号码   |
-|  openid  |      是      |  string  | 微信的openid |
+| **参数**  | **是否必填** | **类型** |   **描述**   |
+| :-------: | :----------: | :------: | :----------: |
+|  mobile   |      是      |  string  |   手机号码   |
+|  openid   |      是      |  string  | 微信的openid |
+| avatarUrl |      是      |  String  |   图片地址   |
 
 
 
 ### 3.3请求示例
 
 ```
-POST http://do.qitongyun.cn:8069/openid_bind?mobile=18516393654&openid=A1231D34
+POST http://do.qitongyun.cn:8069/openid_bind?mobile=18516393654&openid=A1231D34&avatarUrl=‘/dasd/1131/1sdaa’
 ```
 
 
