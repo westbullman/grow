@@ -1544,7 +1544,21 @@ JSON示例:
 
 近期任务接口
 
-<span style='color:green;background:yellow'>近期发布工时的任务  <!--3条最新发布过工时的任务，返回的data：包含任务状态；任务所属项目project_name、project_id；该任务task_name、task_id；工时内容详情momo；工时发布时间PuWork_time--></span>
+<span style='color:green;background:yellow'>近期发布工时的任务  <!--3条最新发布过工时的任务，--></span>
+
+返回的data：
+
+包含任务状态；
+
+任务所属项目project_name、project_id；
+
+任务所属阶段phases_id ；
+
+该任务task_name、task_id；
+
+工时内容详情momo；
+
+工时发布时间PuWork_time
 
 原接口内容
 
@@ -2022,12 +2036,11 @@ application/json;charset=UTF-8
 
 ### 3.4返回参数说明
 
-|  **参数**  | **是否必填** | **类型** |   **描述**   |
-| :--------: | :----------: | :------: | :----------: |
-| project_id |      是      |          |   项目的id   |
-|  task_id   |      是      |  Number  |   任务的id   |
-| task_name  |      是      |          |   任务名称   |
-|  executor  |      是      |  String  |    执行人    |
-|     cc     |      否      |   list   |    抄送人    |
-|   degree   |      是      |  Number  | 任务紧急程度 |
+| **参数**  | **是否必填** | **类型** |   **描述**   |
+| :-------: | :----------: | :------: | :----------: |
+|  task_id  |      是      |  Number  |   任务的id   |
+| task_name |      是      |          |   任务名称   |
+| executor  |      是      |  String  |    执行人    |
+|    cc     |      否      |   list   |    抄送人    |
+|  degree   |      是      |  Number  | 任务紧急程度 |
 
