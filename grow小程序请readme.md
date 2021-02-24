@@ -1767,6 +1767,10 @@ application/json;charset=UTF-8
 
 创建一条灵感
 
+### 1.2接口名称
+
+<span style='color:green;background:yellow'>**create_afflatus**</span>
+
 ### 2.2url参数说明
 
 
@@ -1775,11 +1779,15 @@ application/json;charset=UTF-8
 | :------: | :----------: | :------: | :------: |
 | comment  |      是      |   Text   | 灵感内容 |
 
-# 二十五：List_afflatus 记录灵感
+# 二十五：List_afflatus 返回灵感
 
 ### 1.1接口描述
 
 返回灵感列表
+
+### 1.2接口名称
+
+<span style='color:green;background:yellow'>**list_afflatus**</span>
 
 ### 3.4返回参数说明
 
@@ -1792,6 +1800,46 @@ application/json;charset=UTF-8
 | UpdateTime  |      是      |          | 填写内容时间 |
 | afflatus_id |      是      |          |    灵感id    |
 
+# 二十五1：top_afflatus 置顶灵感
+
+### 1.1接口描述
+
+置顶灵感
+
+### 1.2接口名称
+
+<span style='color:green;background:yellow'>**top_afflatus**</span>
+
+### 2.1url参数说明
+
+
+
+|  **参数**   | **是否必填** | **类型** | **描述** |
+| :---------: | :----------: | :------: | :------: |
+| afflatus_id |      是      |  Number  | 灵感的id |
+
+
+
+# 二十五2：top_off_afflatus 取消置顶灵感
+
+### 1.1接口描述
+
+置顶灵感
+
+### 1.2接口名称
+
+<span style='color:green;background:yellow'>**top_off_afflatus**</span>
+
+### 2.1url参数说明
+
+
+
+|  **参数**   | **是否必填** | **类型** | **描述** |
+| :---------: | :----------: | :------: | :------: |
+| afflatus_id |      是      |  Number  | 灵感的id |
+
+
+
 # 二十六：delete_afflatus 删除灵感
 
 ## 1.接口说明
@@ -1799,6 +1847,10 @@ application/json;charset=UTF-8
 ### 1.1接口描述
 
 删除灵感接口
+
+### 1.2接口名称
+
+<span style='color:green;background:yellow'>**delete_afflatus**</span>
 
 ### 2.2url参数说明
 
@@ -1815,6 +1867,10 @@ application/json;charset=UTF-8
 ### 1.1接口描述
 
  创建grow项目
+
+### 1.2接口名称
+
+<span style='color:green;background:yellow'>**create_project**</span>
 
 ### 2.2url参数说明
 
@@ -1835,6 +1891,10 @@ application/json;charset=UTF-8
 
 删除项目接口
 
+### 1.2接口名称
+
+<span style='color:green;background:yellow'>**delete_project**</span>
+
 ### 2.2url参数说明
 
 
@@ -1850,6 +1910,10 @@ application/json;charset=UTF-8
 ### 1.1接口描述
 
 修改项目接口
+
+### 1.2接口名称
+
+<span style='color:green;background:yellow'>**alter_project**</span>
 
 ### 2.2url参数说明
 
@@ -1871,6 +1935,10 @@ application/json;charset=UTF-8
 
  创建项目阶段
 
+### 1.2接口名称
+
+<span style='color:green;background:yellow'>**create_phases **</span>
+
 ### 2.2url参数说明
 
 
@@ -1888,6 +1956,10 @@ application/json;charset=UTF-8
 ### 1.1接口描述
 
 修改项目阶段接口
+
+### 1.2接口名称
+
+<span style='color:green;background:yellow'>**alter_phases **</span>
 
 ### 2.2url参数说明
 
