@@ -1975,7 +1975,7 @@ application/json;charset=UTF-8
 
 <span style='color:green;background:yellow'>**alter_phases **</span>
 
-### 2.2url参数说明
+### 2.2url参数说明6
 
 
 
@@ -1992,6 +1992,10 @@ application/json;charset=UTF-8
 ### 1.1接口描述
 
 删除项目阶段接口
+
+### 1.2接口名称
+
+<span style='color:green;background:yellow'>**delete_phases **</span>
 
 ### 2.2url参数说明
 
@@ -2010,6 +2014,10 @@ application/json;charset=UTF-8
 ### 1.1接口描述
 
 创建任务
+
+### 1.2接口名称
+
+<span style='color:green;background:yellow'>**create_task**</span>
 
 ### 2.2url参数说明
 
@@ -2031,6 +2039,10 @@ application/json;charset=UTF-8
 ### 1.1接口描述
 
 修改项目阶段接口
+
+### 1.2接口名称
+
+<span style='color:green;background:yellow'>**alter_task**</span>
 
 ### 2.2url参数说明
 
@@ -2054,6 +2066,10 @@ application/json;charset=UTF-8
 
 删除任务接口
 
+### 1.2接口名称
+
+<span style='color:green;background:yellow'>**delete_task**</span>
+
 ### 2.2url参数说明
 
 
@@ -2069,6 +2085,10 @@ application/json;charset=UTF-8
 ### 1.1接口描述
 
 取消任务接口
+
+### 1.2接口名称
+
+<span style='color:green;background:yellow'>**cancel_task**</span>
 
 ### 2.2url参数说明
 
@@ -2087,6 +2107,10 @@ application/json;charset=UTF-8
 ### 1.1接口描述
 
   获取单个任务详情
+
+### 1.2接口名称
+
+<span style='color:green;background:yellow'>**details_task**</span>
 
 ## 2.接口调用说明
 
