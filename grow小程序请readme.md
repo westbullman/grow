@@ -127,11 +127,14 @@ application/json;charset=UTF-8
 
 
 
-# 三：获取相关项目列表 (点击我的项目)
+# <span style='color:green;background:yellow'>三：获取相关项目列表 (点击我的项目)</span>
 
 ## 1.接口说明
 
 ### 1.1接口描述
+
+<span style='color:green;background:yellow'>项目内所有已创建的任务处于终结状态（已完成或已取消）
+-时间已经到达项目截止日期。当同时满足以上两个条件时，即可将项目标记为完成状态，标记为完成状态的项目！不返给我！。但系统后台仍保存记录。</span>
 
   点击我的项目获取项目列表
 
@@ -162,7 +165,18 @@ application/json;charset=UTF-8
 POST http://do.qitongyun.cn:8069/get_project?project_name='金山'&openid=A1231D34
 ```
 
+### <span style='color:green;background:yellow'>3.4返回参数说明</span>
 
+|  **参数说明**  | **类型** | **参数路径** |             **描述**             |
+| :------------: | :------: | :----------: | :------------------------------: |
+|   project_id   |  Number  |              |             项目的id             |
+|  project_name  |  string  |              |             项目名称             |
+| difference_day |  Number  |              |            相差的天数            |
+|     status     |  Number  |              | 是否已经完成，完成是1，未完成是0 |
+|    percent     |  string  |              |              百分比              |
+|  create_date   |   Date   |              |             创建时间             |
+|     create     |  Number  |              |          是否是本人创建          |
+|                |          |              |                                  |
 
 ### 3.4返回参数说明
 
@@ -174,6 +188,7 @@ POST http://do.qitongyun.cn:8069/get_project?project_name='金山'&openid=A1231D
 |     status     |  Number  |              | 是否已经完成，完成是1，未完成是0 |
 |    percent     |  string  |              |              百分比              |
 |  create_date   |   Date   |              |             创建时间             |
+|                |          |              |                                  |
 
 ### 3.5正确返回示例
 
@@ -221,7 +236,7 @@ application/json;charset=UTF-8
 
 <span style='color:green;background:yellow'>选择项目，再选择项目阶段，获取的任务列表</span>
 
-<span style='color:green;background:yellow'>四种状态说明：计划中；进行中；已完成；已取消、一次0.1.2.3</span>
+<span style='color:green;background:yellow'>四种状态说明：计划中；进行中；已完成；已取消、依次0.1.2.3</span>
 
 2.2url参数说明
 
@@ -395,7 +410,47 @@ JSON示例:
 } 
 ```
 
+# <span style='background:yellow'>六：my_profile我的页面所需要的数据</span>
 
+## 1.接口说明
+
+### 1.1接口描述
+
+<span style='background:yellow'>这是一个新加的接口，获取数据展示我的页面，！！所需要的数据和/get_this_week_timesheet（获取本周的总计工时），接口接近</span>
+
+### 1.2接口名称
+
+<span style='color:green;background:yellow'>**my_profile**</span>
+
+
+
+### <span style='background:yellow'>3.4返回参数说明</span>
+
+| **参数说明** | **类型** | **参数路径** |  **描述**  |
+| :----------: | :------: | :----------: | :--------: |
+|  total_hour  |  String  |              | 本周总工时 |
+|    total     |  Number  |              |  元宝总数  |
+|     job      |  String  |              |    岗位    |
+|    depart    |  String  |              |    部门    |
+|     team     |   list   |              |  部门人员  |
+|    leader    | boolean  |              | 部门负责人 |
+
+### <span style='background:yellow'>3.5正确返回示例</span>
+
+JSON示例: 
+
+```
+application/json;charset=UTF-8
+{
+‘code':1001,
+'message':"获取信息成功!",
+‘total_hour’:'25h',
+'team':[{'name':'张三','id':'1'},
+		{'name':'李四','id':'2'}]
+}
+```
+
+### 
 
 # 六：获取本周的总计工时
 
@@ -404,6 +459,17 @@ JSON示例:
 ### 1.1接口描述
 
   获取本周的总计工时
+
+<span style='background:yellow'>本周成长页面需要：本周工时和上周工时的对比，每天工时和昨天工时对比，本周每天工时和上周每天工时，</span>
+
+### <span style='background:yellow'>3.4返回参数说明</span>
+
+| **参数说明**  | **类型** | **参数路径** |   **描述**   |
+| :-----------: | :------: | :----------: | :----------: |
+|               |   list   |              | 本周每天工时 |
+|               |   list   |              | 上周每日工时 |
+|  total_hour   |  String  |              |  本周总工时  |
+| compare_total |  string  |              |  与上周比较  |
 
 ## 2.接口调用说明
 
@@ -468,8 +534,6 @@ JSON示例:
 	“total_hour”:'0h'
 } 
 ```
-
-
 
 # 七：获取人员列表的接口
 
