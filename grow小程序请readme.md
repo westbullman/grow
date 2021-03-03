@@ -1839,7 +1839,7 @@ application/json;charset=UTF-8
 
 # **<u>*1.1新版本*</u>**
 
-# 二十四：Record_afflatus 记录灵感
+# 二十四：create_afflatus记录灵感
 
 ### 1.1接口描述
 
@@ -1918,7 +1918,30 @@ application/json;charset=UTF-8
 
 
 
-# 二十六：delete_afflatus 删除灵感
+# 二十六：alter_afflatus 修改灵感
+
+## 1.接口说明
+
+### 1.1接口描述
+
+修改项目接口
+
+### 1.2接口名称
+
+<span style='color:green;background:yellow'>**alter_afflatus**</span>
+
+### 2.2url参数说明
+
+
+
+|  **参数**   | **是否必填** | **类型** | **描述** |
+| :---------: | :----------: | :------: | :------: |
+| afflatus_id |      是      |  Number  | 灵感的id |
+|   comment   |      是      |          | 灵感内容 |
+
+
+
+# 二十七：delete_afflatus 删除灵感
 
 ## 1.接口说明
 
@@ -1938,7 +1961,7 @@ application/json;charset=UTF-8
 | :---------: | :----------: | :------: | :------: |
 | afflatus_id |      是      |  Number  | 灵感的id |
 
-# 二十七：create_project 创建项目
+# 二十八：create_project 创建项目
 
 ## 1.接口说明
 
@@ -1981,7 +2004,7 @@ application/json;charset=UTF-8
 | :--------: | :----------: | :------: | :------: |
 | project_id |      是      |  Number  | 项目的id |
 
-# 二十九：alter_project 修改项目
+# 三十：alter_project 修改项目
 
 ## 1.接口说明
 
@@ -2005,7 +2028,7 @@ application/json;charset=UTF-8
 
 
 
-# 二十七：create_phases 创建项目阶段
+# 三一：create_phases 创建项目阶段
 
 ## 1.接口说明
 
@@ -2027,7 +2050,56 @@ application/json;charset=UTF-8
 |  phases_name   |      是      |  String  | 阶段名称 |
 | phases_content |      是      |  string  | 阶段说明 |
 
-# 二十九：alter_phases 修改阶段
+# 三十二：List_phases 返回阶段
+
+### 1.1接口描述
+
+返回阶段列表
+
+### 1.2接口名称
+
+<span style='color:green;background:yellow'>**list_phases**</span>
+
+### 2.2url参数说明
+
+
+
+|  **参数**  | **是否必填** | 类型 | **描述** |
+| :--------: | :----------: | ---- | :------: |
+| project_id |      是      |      | 项目的id |
+
+### 3.4返回参数说明
+
+|    **参数**    | **是否必填** | **类型** | **描述** |
+| :------------: | :----------: | :------: | :------: |
+|   phases_id    |      是      |  Number  | 阶段的id |
+|  project_name  |      是      |  String  | 项目名称 |
+|   project_id   |      是      |  Number  | 项目的id |
+|  phases_name   |      是      |  String  | 阶段名称 |
+| phases_content |      是      |  string  | 阶段说明 |
+
+### 3.5正确返回示例
+
+JSON示例: 
+
+```
+application/json;charset=UTF-8
+{
+‘code':1001,
+'message':"获取信息成功!",
+‘data’:{
+		‘project_name’:'我是尼玛偶像',
+		‘project_id’:'项目的id',
+		'list':[
+				'phases_name':乔峰',
+				'phases_content':'巴拉巴拉',]
+	}
+}
+```
+
+### 
+
+# 三十三：alter_phases 修改阶段
 
 ## 1.接口说明
 
@@ -2049,7 +2121,7 @@ application/json;charset=UTF-8
 |  phases_name   |      是      |  String  | 阶段名称 |
 | phases_content |      是      |  string  | 阶段说明 |
 
-# 二十九：delete_phases 删除阶段
+# 三十四：alter_phases 删除阶段
 
 ## 1.接口说明
 
@@ -2071,7 +2143,7 @@ application/json;charset=UTF-8
 
 
 
-# 二十八：create_task 创建任务
+# 三十五：create_task 创建任务
 
 ## 1.接口说明
 
@@ -2096,7 +2168,7 @@ application/json;charset=UTF-8
 |     cc     |      否      | list   |    抄送人    |
 |   degree   |      是      | Number | 任务紧急程度 |
 
-# 二十九：alter_task 修改任务
+# 三十六：alter_task 修改任务
 
 ## 1.接口说明
 
@@ -2122,7 +2194,7 @@ application/json;charset=UTF-8
 
 
 
-# 三十：delete_task 删除任务
+# 三十七：delete_task 删除任务
 
 ## 1.接口说明
 
@@ -2142,7 +2214,7 @@ application/json;charset=UTF-8
 | :------: | :----------: | :------: | :------: |
 | task_id  |      是      |  Number  | 任务的id |
 
-# 三十：cancel_task 取消任务
+# 三十八：cancel_task 取消任务
 
 ## 1.接口说明
 
@@ -2164,7 +2236,7 @@ application/json;charset=UTF-8
 
 # 
 
-# 三十一：details_task任务详情
+# 三十九：details_task任务详情
 
 ## 1.接口说明
 
