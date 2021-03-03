@@ -234,16 +234,22 @@ application/json;charset=UTF-8
 
   获取任务信息
 
-<span style='color:green;background:yellow'>选择项目，再选择项目阶段，获取的任务列表</span>
+<span style='color:green;background:yellow'>任务名称搜索task_name,空值返回所有，否则模糊查询；传参，紧急程度1，2，3，空返回所有程度任务</span>
 
-<span style='color:green;background:yellow'>四种状态说明：计划中；进行中；已完成；已取消、依次0.1.2.3</span>
+<span style='color:green;background:yellow'>四种状态说明：计划中；进行中；已完成；已取消、依次1,2,3,4,99 （返回全部状态任务）</span>
+
+<span style='color:green;background:yellow'>project_id传空，返回openid下所有任务，phases_id传空，返回openid当前项目的所有任务</span>
 
 2.2url参数说明
 
-|  **参数**  | **是否必填** | **类型** | **描述** |
-| :--------: | :----------: | :------: | :------: |
-| project_id |      是      |  Numebr  | 项目的id |
-| phases_id  |      是      |  string  | 阶段的id |
+|  **参数**  | **是否必填** | **类型** |   **描述**   |
+| :--------: | :----------: | :------: | :----------: |
+| project_id |      否      |  Numebr  |   项目的id   |
+|  task_id   |      否      |          |    任务id    |
+| phases_id  |      否      |  string  |   阶段的id   |
+| task_name  |      否      |          |   任务名称   |
+|   state    |      是      |          |   四种状态   |
+|   degree   |      否      |  Number  | 任务紧急程度 |
 
 
 
@@ -256,7 +262,7 @@ application/json;charset=UTF-8
 |  task_name   |  string  |              |   任务名称   |
 |   task_id    |  Number  |              |    任务id    |
 |    state     |  string  |              |   四种状态   |
-|    degree    |    是    |    Number    | 任务紧急程度 |
+|    degree    |          |    Number    | 任务紧急程度 |
 
 ## 2.接口调用说明
 
