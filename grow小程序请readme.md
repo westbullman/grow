@@ -236,7 +236,7 @@ application/json;charset=UTF-8
 
 <span style='color:green;background:yellow'>任务名称搜索task_name,空值返回所有，否则模糊查询；传参，紧急程度1，2，3，空返回所有程度任务</span>
 
-<span style='color:green;background:yellow'>四种状态说明：计划中；进行中；已完成；已取消、依次1,2,3,4,99 （返回全部状态任务）</span>
+<span style='color:green;background:yellow'>四种状态说明：计划中；进行中；已完成；已取消、依次"1","2","3","4","99" （"99"返回全部状态任务;"1,2"返回"计划中"和"进行中"合起来的list）</span>
 
 <span style='color:green;background:yellow'>project_id传空，返回openid下所有任务，phases_id传空，返回openid当前项目的所有任务</span>
 
@@ -248,7 +248,7 @@ application/json;charset=UTF-8
 |  task_id   |      否      |          |    任务id    |
 | phases_id  |      否      |  string  |   阶段的id   |
 | task_name  |      否      |          |   任务名称   |
-|   state    |      是      |          |   四种状态   |
+|   state    |      是      |  string  |   四种状态   |
 |   degree   |      否      |  Number  | 任务紧急程度 |
 
 
