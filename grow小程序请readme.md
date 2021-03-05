@@ -234,7 +234,7 @@ application/json;charset=UTF-8
 
   获取任务信息
 
-<span style='color:green;background:yellow'>任务名称搜索task_name,空值返回所有，否则模糊查询；传参，紧急程度1，2，3，空返回所有程度任务</span>
+<span style='color:green;background:yellow'>任务名称搜索task_name,空值返回所有，否则模糊查询；传参，紧急程度1，2，3，99返回所有程度任务</span>
 
 <span style='color:green;background:yellow'>四种状态说明：计划中；进行中；已完成；已取消、依次"1","2","3","4","99" （"99"返回全部状态任务;"1,2"返回"计划中"和"进行中"合起来的list）</span>
 
@@ -249,20 +249,21 @@ application/json;charset=UTF-8
 | phases_id  |      否      |  string  |   阶段的id   |
 | task_name  |      否      |          |   任务名称   |
 |   state    |      是      |  string  |   四种状态   |
-|   degree   |      否      |  Number  | 任务紧急程度 |
+|   degree   |      是      |  Number  | 任务紧急程度 |
 
 
 
 3.4返回参数说明
 
-| **参数说明** | **类型** | **参数路径** |   **描述**   |
-| :----------: | :------: | :----------: | :----------: |
-|     code     |  String  |              |   返回编码   |
-|   message    |  string  |              |   返回信息   |
-|  task_name   |  string  |              |   任务名称   |
-|   task_id    |  Number  |              |    任务id    |
-|    state     |  string  |              |   四种状态   |
-|    degree    |          |    Number    | 任务紧急程度 |
+| **参数说明** | **类型** |   **描述**   |
+| :----------: | :------: | :----------: |
+|     code     |  String  |   返回编码   |
+|   message    |  string  |   返回信息   |
+|  task_name   |  string  |   任务名称   |
+|   task_id    |  Number  |    任务id    |
+|    state     |  string  |   四种状态   |
+|    degree    |  Number  | 任务紧急程度 |
+| phases_name  |  string  |   阶段名称   |
 
 ## 2.接口调用说明
 
@@ -432,14 +433,18 @@ JSON示例:
 
 ### <span style='background:yellow'>3.4返回参数说明</span>
 
-| **参数说明** | **类型** | **参数路径** |  **描述**  |
-| :----------: | :------: | :----------: | :--------: |
-|  total_hour  |  String  |              | 本周总工时 |
-|    total     |  Number  |              |  元宝总数  |
-|     job      |  String  |              |    岗位    |
-|    depart    |  String  |              |    部门    |
-|     team     |   list   |              |  部门人员  |
-|    leader    | boolean  |              | 部门负责人 |
+| **参数说明** | **类型** |    **描述**    |
+| :----------: | :------: | :------------: |
+|  total_hour  |  String  |   本周总工时   |
+|    total     |  Number  |    元宝总数    |
+|     job      |  String  |      岗位      |
+|    depart    |  String  |      部门      |
+|     team     |   list   |    部门人员    |
+|    leader    | boolean  |   部门负责人   |
+|     plan     |  Number  | 计划中任务数量 |
+|   progress   |  Number  | 进行中任务数量 |
+|   complete   |  Number  | 已完成任务数量 |
+|   defualt    |  Number  | 已取消任务数量 |
 
 ### <span style='background:yellow'>3.5正确返回示例</span>
 
@@ -464,18 +469,20 @@ application/json;charset=UTF-8
 
 ### 1.1接口描述
 
-  获取本周的总计工时
+  get_this_week_timesheet
 
 <span style='background:yellow'>本周成长页面需要：本周工时和上周工时的对比，每天工时和昨天工时对比，本周每天工时和上周每天工时，</span>
 
 ### <span style='background:yellow'>3.4返回参数说明</span>
 
-| **参数说明**  | **类型** | **参数路径** |   **描述**   |
-| :-----------: | :------: | :----------: | :----------: |
-|               |   list   |              | 本周每天工时 |
-|               |   list   |              | 上周每日工时 |
-|  total_hour   |  String  |              |  本周总工时  |
-| compare_total |  string  |              |  与上周比较  |
+|     **参数说明**     | **类型** | **参数路径** |   **描述**   |
+| :------------------: | :------: | :----------: | :----------: |
+|   week_time_hours    |   list   |              | 本周每天工时 |
+| last_week_time_hours |   list   |              | 上周每日工时 |
+|      total_hour      |  String  |              |  本周总工时  |
+|      today_hour      |  String  |              |   本日工时   |
+|    compare_total     |  string  |              |  与上周比较  |
+|  compare_day_total   |  string  |              | 与前一天比较 |
 
 ## 2.接口调用说明
 
@@ -1612,7 +1619,7 @@ JSON示例:
 
 ### 1.1接口描述
 
-近期任务接口
+近期任务接口    get_new_three_task
 
 <span style='color:green;background:yellow'>近期发布工时的任务  <!--3条最新发布过工时的任务，--></span>
 
@@ -1626,7 +1633,7 @@ JSON示例:
 
 该任务task_name、task_id；
 
-工时内容详情momo；
+工时内容详情memo；
 
 工时发布时间PuWork_time
 
@@ -2240,7 +2247,29 @@ application/json;charset=UTF-8
 | :------: | :----------: | :------: | :------: |
 | task_id  |      是      |  Number  | 任务的id |
 
-# 
+ 
+
+# 三十八：complete_task 完成任务
+
+## 1.接口说明
+
+### 1.1接口描述
+
+取消任务接口
+
+### 1.2接口名称
+
+<span style='color:green;background:yellow'>**complete_task**</span>
+
+### 2.2url参数说明
+
+
+
+| **参数** | **是否必填** | **类型** | **描述** |
+| :------: | :----------: | :------: | :------: |
+| task_id  |      是      |  Number  | 任务的id |
+
+ 
 
 # 三十九：details_task任务详情
 
