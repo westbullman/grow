@@ -2320,7 +2320,7 @@ application/json;charset=UTF-8
 | **参数** | **是否必填** | **类型** |   **描述**   |
 | :------: | :----------: | :------: | :----------: |
 |   mins   |      是      |  String  |  周榜/月榜   |
-|  scope   |      否      |  String  | 是否只看部门 |
+|  scope   |      否      | Boolean  | 是否只看部门 |
 
 
 
@@ -2330,7 +2330,7 @@ application/json;charset=UTF-8
 | :------: | :------: | :------------------: |
 |          |  String  | 距离NO.1你还差一丢丢 |
 |          |  String  |         头像         |
-|          |  String  |         头像         |
+|          |  String  |         名字         |
 |          |  Number  |         排名         |
 |          |  Number  |         红花         |
 
@@ -2352,12 +2352,13 @@ application/json;charset=UTF-8
 		”ff“:红花
 	}
 		'list':[
-				 "bb":{
+		{
 		"cc":”头像“,
 		"dd":"名字",
 		"ee":排名，
 		”ff“:红花
-	},"bb":{
+	},
+	{
 		"cc":”头像“,
 		"dd":"名字",
 		"ee":排名，
